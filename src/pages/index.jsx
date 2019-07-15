@@ -6,6 +6,7 @@ import { Parallax } from 'react-spring/renderprops-addons.cjs'
 // Components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
+import JobListItem from '../components/JobListItem'
 
 // Elements
 import Inner from '../elements/Inner'
@@ -65,6 +66,51 @@ const ContactText = styled.p`
 const Footer = styled.footer`
   ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
 `
+
+const PhpDeveloper = `
+PHP, Linux, PHP 7.1
+
+Are you a Senior or Lead PHP Engineer with 7.1 experience? If so, read on...
+
+Don't want to commute to the West Side? G-R-E-A-T....NEITHER DO WE!!! Headquartered in Glendale, we have the least attrition of any company in the greater Los Angeles area and we offer an unparalleled culture on top of competitive pay, benefits and cutting edge technology.
+
+Top Reasons to Work with Us
+
+1. Based in Glendale, we are digital data collection company that is setting a higher standard for data quality.
+2. Our company is rapidly-growing and we just moved into a beautiful new office.
+3. You will have the chance to work on exciting new development projects with a talented team.
+
+What You Will Be Doing
+
+This is a great opportunity to join a fun, exciting & highly motivated team and upgrade your skills. We use a modern programming stack and cloud infrastructure. We are not only looking for work experience, but rather the willingness to step up to challenges and the ability to learn quickly.
+
+What You Need for this Position
+
+- 5+ years of modern PHP programming on a large custom code base
+- Solid knowledge of the Design Patterns
+- Experience with Linux
+
+Nice to Have:
+- Experience with building Microservices and RESTful APIs
+- Experience with Amazon Web Services (AWS)
+- GitHub or similar environment
+
+What's In It for You
+
+- Working to make the world better
+- A chance to make a real difference
+- Be an Entreprenur without too much risk.
+- Awesome and engaging project.
+
+Senior / Lead PHP Developer with 5+ years experience, please apply today!
+
+Applicants must be authorized to work in the U.S.Please apply directly to by clicking 'Click Here to Apply' with your Word resume!
+
+Looking forward to receiving your resume and going over the position in more detail with you.
+
+- Not a fit for this position? Click the link at the bottom of this email to search all of our open positions.
+
+Looking forward to receiving your resume!`;
 
 const Index = () => (
   <>
@@ -231,10 +277,13 @@ const Index = () => (
       <About offset={9}>
         <Title>Help Wanted</Title>
         <AboutHero>
-          <Avatar src={portrait1} alt="Doctor" />
-          <AboutSubSmall>
-            Arther Ford, DVM, is an Emergency Medicine Veterinarian at MedVet Hilliard, MedVet Mandeville, MedVet Mobile, and MedVet New Orleans. Dr. Akers attended Colorado State University, where she obtained a Bachelor of Science degree in Equine Sciences. She completed her Doctor of Veterinary Medicine at Colorado State University College of Veterinary Medicine and Biomedical Sciences in 2011.
-          </AboutSubSmall>
+          <JobListItem
+            title="PHP Developer"
+            companyName="SYLO LOVE"
+            postedAt="Jul 15, 2019"
+            experience={PhpDeveloper}
+            onPress={() => {}}
+          />
         </AboutHero>
         <AboutHero>
           <Avatar src={portrait2} alt="Doctor" />
@@ -259,36 +308,28 @@ const Index = () => (
         <Title>INVESTMENT</Title>
         <ProjectsWrapper>
           <ProjectCard
-            title="UCLA"
-            link="https://www.behance.net/gallery/58937147/Freiheit"
+            title="Individual Donors"
+            link="https://www.gofundme.com"
             bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
           >
-            Start date: Jan 1st, 2020. <br />One of the finest University in the World.
+            Go Fund Me
           </ProjectCard>
           <ProjectCard
-            title="CHATSWORTH COMMUNITY"
-            link="https://www.behance.net/gallery/52915793/Harry-Potter"
+            title="Private Investors"
+            link="https://www.indiegogo.com"
             bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
             Start date: Jan 1st, 2020. <br />One of the oldest care center in California.
           </ProjectCard>
           <ProjectCard
-            title="OC RETIREMENT"
+            title="Venture Capital"
             link="https://www.behance.net/gallery/43907099/Tomb-Raider"
             bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
           >
             Start date: Jan 1st, 2020. <br />One of the most technologically advanced retirement community. 
           </ProjectCard>
-          <ProjectCard
-            title="LA RETIREMENT"
-            link="https://www.behance.net/gallery/38068151/Eagle"
-            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-          >
-            Start date: Jan 1st, 2020. <br /> A history of pioneering retirement community in downtown Los Angeles.
-          </ProjectCard>
         </ProjectsWrapper>
       </Projects>
-
       <Contact offset={11}>
         <Inner>
           <Title>Get in touch</Title>
